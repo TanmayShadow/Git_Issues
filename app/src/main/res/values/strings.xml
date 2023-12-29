@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">GitIssue</string>
+    <string name="app_name_cap">GIT ISSUE</string>
+    <string name="filter">Filter</string>
+</resources>

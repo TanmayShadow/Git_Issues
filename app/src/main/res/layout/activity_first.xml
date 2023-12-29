@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FirstActivity">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/gitissue_logo"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="100dp"
+        android:src="@drawable/big_gitissue"/>
+    <TextView
+        android:id="@+id/gitissue_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/app_name_cap"
+        app:layout_constraintTop_toBottomOf="@id/gitissue_logo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="10dp"
+        android:textSize="22sp"
+        android:fontFamily="@font/inter_medium"
+        android:textStyle="bold"
+        android:textColor="@color/dark_text_color"/>
+
+    <EditText
+        android:id="@+id/github_username"
+        android:layout_width="250dp"
+        android:layout_height="45dp"
+        app:layout_constraintTop_toBottomOf="@id/gitissue_title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="30dp"
+        android:hint="Github Username"
+        android:fontFamily="@font/inter_medium"
+        android:textSize="18sp"
+        android:background="@drawable/text_view_background"/>
+
+    <EditText
+        android:id="@+id/github_repository"
+        android:layout_width="250dp"
+        android:layout_height="45dp"
+        app:layout_constraintTop_toBottomOf="@id/github_username"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="20dp"
+        android:hint="Repository"
+        android:fontFamily="@font/inter_medium"
+        android:textSize="18sp"
+        android:background="@drawable/text_view_background"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/gitissue_button"
+        android:layout_width="200dp"
+        android:layout_height="45dp"
+        app:layout_constraintTop_toBottomOf="@id/github_repository"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/start_button_background"
+        android:textColor="@color/white"
+        android:text="Get Issues"
+        android:fontFamily="@font/inter_medium"
+        android:textSize="18sp"
+        android:drawableEnd="@drawable/baseline_arrow_forward_24"
+        android:onClick="showIssues"/>
+
+    <TextView
+        android:id="@+id/defaulttext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/gitissue_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="Click here to get test user's issue"
+        android:layout_marginTop="15dp"
+        android:textColor="#6B80F6"
+        android:textSize="15sp"
+        android:onClick="showDefault"/>
+
+    <TextView
+        android:id="@+id/errorText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/defaulttext"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textColor="#FF0000"
+        android:layout_marginTop="10dp"/>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
